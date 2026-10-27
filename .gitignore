@@ -1,0 +1,45 @@
+# User Configuration & Credentials (auto-generated on runtime)
+config.json
+config.json.tmp
+*cookies*.txt
+.sessions/
+*.cookies
+
+# User Media & Download History
+downloads/
+.download_history.txt
+.download_checkpoint.json
+links.txt
+*_links.txt
+*_urls.txt
+failed_urls.txt
+
+# Python Build & Distribution
+build/
+dist/
+*.egg-info/
+*.egg
+MANIFEST
+
+# Bytecode & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# Editor & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+HAUSTUS_ALL_SCREENS.html

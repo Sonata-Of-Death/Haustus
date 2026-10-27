@@ -1,0 +1,85 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "haustus"
+version = "1.0.0"
+description = "High-throughput terminal media downloader, audio mastering, and transcoding workstation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Adham Mohamed", email = "sonataofdeathprojects@gmail.com" }
+]
+keywords = [
+    "downloader",
+    "yt-dlp",
+    "youtube-dl",
+    "media-downloader",
+    "video-downloader",
+    "audio-mastering",
+    "terminal-ui",
+    "rich",
+    "instagram",
+    "tiktok",
+    "youtube",
+    "threads",
+    "spotify"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: Utilities"
+]
+dependencies = [
+    "yt-dlp>=2025.1.0",
+    "requests>=2.31.0",
+    "rich>=13.7.0",
+    "mutagen>=1.47.0",
+    "imageio-ffmpeg>=0.5.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.4",
+    "build>=1.0"
+]
+
+[project.scripts]
+haustus = "haustus:main"
+
+[project.urls]
+Homepage = "https://github.com/Sonata-Of-Death/Haustus"
+Documentation = "https://github.com/Sonata-Of-Death/Haustus#readme"
+Repository = "https://github.com/Sonata-Of-Death/Haustus"
+"Bug Tracker" = "https://github.com/Sonata-Of-Death/Haustus/issues"
+Changelog = "https://github.com/Sonata-Of-Death/Haustus/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+packages = ["core", "features", "platforms", "ui"]
+py-modules = ["haustus"]
+
+[tool.setuptools.package-data]
+"*" = ["py.typed"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = [
+    "E501",  # line too long (CLI table and ASCII art strings)
+]
